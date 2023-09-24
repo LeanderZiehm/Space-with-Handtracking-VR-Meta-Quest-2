@@ -13,7 +13,9 @@ public class MyVRButton : MonoBehaviour
         _meshRenderer = GetComponent<MeshRenderer>();
         defaultMaterial = _meshRenderer.material;
         startScale = transform.localScale.x;
-      
+
+
+       
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -60,26 +62,41 @@ public class MyVRButton : MonoBehaviour
     
     private void OnClick(Collider other)
     {
-        if (_buttonAction == ButtonAction.exit)
+        // if (_buttonAction == ButtonAction.exit)
+        // {
+        //     Application.Quit();
+        // }else if (_buttonAction == ButtonAction.twoStationaryGravityCristals)
+        // {
+        //     // References.instance.gravityBalls[0].SetActive(true);
+        //     // References.instance.gravityBalls[1].SetActive(true);
+        // }
+        // else 
+        // {
+        //     // References.instance.gravityBalls[0].SetActive(false);
+        //     // References.instance.gravityBalls[1].SetActive(false);
+        //     //
+        //     if (_buttonAction == ButtonAction.draw)
+        //     {
+        //         // References.instance.drawBalls[0].gameObject.SetActive(true);
+        //         // References.instance.drawBalls[1].gameObject.SetActive(true);
+        //         
+        //         
+        //     }
+        //   
+        // }
+        
+        if (_buttonAction == ButtonAction.draw)
         {
-            Application.Quit();
-        }else if (_buttonAction == ButtonAction.twoStationaryGravityCristals)
-        {
-            References.instance.gravityBalls[0].SetActive(true);
-            References.instance.gravityBalls[1].SetActive(true);
-        }
-        else 
-        {
-            References.instance.gravityBalls[0].SetActive(false);
-            References.instance.gravityBalls[1].SetActive(false);
-            
-            if (_buttonAction == ButtonAction.draw)
+
+            if (GetComponent<Animator>().enabled)
             {
-                References.instance.drawBalls[0].gameObject.SetActive(true);
-                References.instance.drawBalls[1].gameObject.SetActive(true);
+                GetComponent<Animator>().enabled = false;
+                MyHand.CreateArrowsForBothHands();
             }
-            MyHand._buttonAction = _buttonAction;
+          
         }
+        
+        MyHand._buttonAction = _buttonAction;
     }
 }
 
@@ -95,5 +112,6 @@ public enum ButtonAction
     spawnDoesNotPull,
     countingMode,
     gravityHands,
-    pinchMode
+    pinchMode,
+    restart
 }

@@ -44,7 +44,7 @@ public class PlanetSpawnder : MonoBehaviour
 
     public void SpawnPlanet(Vector3 transformPosition, Vector3 direction, float spawnSize) //
     {
-        Planet spawnedPlanet = CreatePlanet(transformPosition,spawnSize);
+        Planet spawnedPlanet = CreatePlanet(transformPosition,0.1f + direction.magnitude*5);
         spawnedPlanet.SetStartDirection(direction);
         spawnedPlanet.GetComponent<MeshRenderer>().material = planetMaterials[0];
     }

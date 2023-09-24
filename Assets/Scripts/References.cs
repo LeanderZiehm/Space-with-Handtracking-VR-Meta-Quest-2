@@ -1,6 +1,7 @@
 using System;
 using TMPro;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 public class References : MonoBehaviour
 {
@@ -25,6 +26,9 @@ public class References : MonoBehaviour
     public GameObject[] gravityBalls;
     public GameObject[] gravityHandBalls;
     public Material gravityHandMaterial,defaultHandMaterial;
+    public GameObject arrowPrefab;
+    public SpriteRenderer drawSpriteRenderer;
+    public GameObject earthPrefab;
 
 
     // public ButtonAction buttonAction;
