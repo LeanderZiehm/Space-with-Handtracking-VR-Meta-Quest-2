@@ -124,4 +124,10 @@ public class Planet : MonoBehaviour
     {
         shouldPull = false;
     }
+
+    public void DestroyPlanet()
+    {
+        RemoveFromGettingPulled();
+        Destroy(gameObject);
+    }
 }

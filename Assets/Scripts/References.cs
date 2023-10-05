@@ -29,6 +29,7 @@ public class References : MonoBehaviour
     public GameObject arrowPrefab;
     public SpriteRenderer drawSpriteRenderer;
     public GameObject earthPrefab;
+    public GameObject planetButton;
 
 
     // public ButtonAction buttonAction;

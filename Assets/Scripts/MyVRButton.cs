@@ -92,6 +92,7 @@ public class MyVRButton : MonoBehaviour
             {
                 GetComponent<Animator>().enabled = false;
                 MyHand.CreateArrowsForBothHands();
+                References.instance.planetButton.SetActive(true);
             }
           
         }

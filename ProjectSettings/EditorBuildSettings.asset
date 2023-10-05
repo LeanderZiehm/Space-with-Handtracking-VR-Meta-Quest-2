@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Gravity.unity
     guid: f709529d4fa1de64c80dc31f43a26e1f
   - enabled: 0
@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Hand.unity
     guid: b5cbea363538ed245b837785489d8d38
+  - enabled: 1
+    path: Assets/Scenes/Gravity2.0.unity
+    guid: 2558d55855c46534b9016a20d3eb8e36
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 21c0b8cc612e4b8459bf786ef409a0cc, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 45c5435caf394af47a0eb47833001e30, type: 2}

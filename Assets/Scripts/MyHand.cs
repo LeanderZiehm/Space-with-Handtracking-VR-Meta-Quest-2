@@ -20,7 +20,7 @@ public class MyHand : MonoBehaviour
     private SoundManager _soundManager;
     private PlanetSpawnder _planetSpawnder;
     private const int boneFingerTips = 19;
-    public static ButtonAction _buttonAction = ButtonAction.spawnPlanet;
+    public static ButtonAction _buttonAction = ButtonAction.nothing;
     public static float planetSize;
     private int handIndex; //,fingerIndex;
     private Transform[] handColliders;
@@ -272,7 +272,7 @@ public class MyHand : MonoBehaviour
                 startPullPos = indexFingerPosition;
             }else if  (_buttonAction == ButtonAction.restart)
             {
-                _buttonAction = ButtonAction.nothing;
+                // _buttonAction = ButtonAction.nothing;
                  Loader.ReloadLevel();
                 
             }
